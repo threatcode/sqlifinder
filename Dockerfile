@@ -1,5 +1,8 @@
-# Use a base image with Python installed
+# Use a base image with Python and Git installed
 FROM python:3.9-slim
+
+# Install Git
+RUN apt-get update && apt-get install -y git
 
 # Set the working directory inside the container
 WORKDIR /app
